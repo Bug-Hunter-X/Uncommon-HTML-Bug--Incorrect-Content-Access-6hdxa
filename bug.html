@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrect way to access the content of the div
+    const divContent = document.getElementById("myDiv").textContent; // This is actually correct but may have unintended consequences
+    console.log(divContent); // Output: This is some text.
+
+    //To get inner HTML which includes HTML tags:
+    const divInnerHTML = document.getElementById("myDiv").innerHTML;
+    console.log(divInnerHTML); // Output: <p>This is some text.</p>
+  </script>
+</body>
+</html>
